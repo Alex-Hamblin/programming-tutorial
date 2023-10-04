@@ -18,6 +18,11 @@ public static class InputManager
             myPlayer.SetMovementDirection(jeff.ReadValue<Vector3>());
 
         };
+
+        _gameControls.InGame.Jump.started += jeff =>
+        {
+            myPlayer.Jump();
+        };
     }
 
     public static void SetGameControls()
